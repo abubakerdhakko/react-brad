@@ -55,17 +55,23 @@ export class Provider extends Component {
 
 
     render() {
+        const { loader } = this.state
+  
         return (
-            <Context.Provider value={this.state}>
-                  {loader &&
+            <div className="">
+                {loader &&
                 <Loader
                   type="Puff"
                   color="#000000"
                   height="100"
                   width="100"
                 />}
+            
+            <Context.Provider value={this.state}>
+                 
                 {this.props.children}
             </Context.Provider>
+            </div>
         )
     }
 }
