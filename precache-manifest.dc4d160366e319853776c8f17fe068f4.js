@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/react-brad/static/js/runtime~main.bd5c20c1.js"
   },
   {
-    "revision": "29be9fe481e0df24fc54",
-    "url": "/react-brad/static/js/main.661754b7.chunk.js"
+    "revision": "30a0bc7ddef363bb3ad1",
+    "url": "/react-brad/static/js/main.b01e9838.chunk.js"
   },
   {
-    "revision": "fd8efeae3c6298aee976",
-    "url": "/react-brad/static/js/2.4d11f7a7.chunk.js"
+    "revision": "3f17e1a0099798f5b702",
+    "url": "/react-brad/static/js/2.eecf2461.chunk.js"
   },
   {
-    "revision": "29be9fe481e0df24fc54",
+    "revision": "30a0bc7ddef363bb3ad1",
     "url": "/react-brad/static/css/main.91f36700.chunk.css"
   },
   {
-    "revision": "fd8efeae3c6298aee976",
+    "revision": "3f17e1a0099798f5b702",
     "url": "/react-brad/static/css/2.aff52eb7.chunk.css"
   },
   {
-    "revision": "a6a070e2ac247d16c7b3c9a0327d24fd",
+    "revision": "e77089cb9e6179f4219b34f5d4899628",
     "url": "/react-brad/index.html"
   }
 ];
