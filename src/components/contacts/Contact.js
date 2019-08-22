@@ -4,17 +4,25 @@ import { Consumer } from '../Context';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Loader from 'react-loader-spinner'
-
+import EditComponent from '../contacts/editcomponent'
 class Contact extends Component {
   state = {
     showContactInfo: false,
     loader: false,
+    showEditComponent: false
   };
 
   onShowClick = (name, e) => {
 
     this.setState({
       showContactInfo: !this.state.showContactInfo
+    })
+  };
+
+  onClickEditcomponent = (name, e) => {
+
+    this.setState({
+      showEditComponent: !this.state.showEditComponent
     })
   };
   onDeleteClick = async (id, dispatch) => {
@@ -37,7 +45,7 @@ class Contact extends Component {
   render() {
 
     const { id, name, email, phone } = this.props.contact;
-    const { showContactInfo, loader } = this.state
+    const { showContactInfo, loader , showEditComponent } = this.state
     return (
 
       <Consumer>
@@ -62,6 +70,9 @@ class Contact extends Component {
                     <Link to={`contact/edit/${id}`}>
                       <i className="fas fa-pencil-alt" style={{ float: 'right', marginRight: '1rem', color: 'red', cursor: 'pointer' }}></i>
                     </Link>
+                    {/* <Link to={`contact/edit/${id}`}> */}
+                      <i className="fas fa-pencil-alt" key={this.props.id} onClick={this.onClickEditcomponent.bind(this, id, dispatch)} style={{ float: 'right', marginRight: '1rem', color: 'black', cursor: 'pointer' }}></i>
+                    {/* </Link> */}
                     {showContactInfo ? (<ul className="list-group">
                       <li id="asd" className="list-group-item">
                         Email: {email}
@@ -73,6 +84,8 @@ class Contact extends Component {
                   </div>
                 </div>
               </div>
+              {showEditComponent ? ( 
+              <EditComponent></EditComponent>) : null}
             </div>
           )
         }}
